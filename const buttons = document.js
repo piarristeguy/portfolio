@@ -20,25 +20,29 @@ function animate() {
     item.pos.x += item.vel.x;
     item.pos.y += item.vel.y;
 
-    const margin = 80;
 
-    // Contención en los bordes
-    if (item.pos.x < 0) {
-      item.pos.x = 0;
-      item.vel.x *= -1;
-    }
-    if (item.pos.x > window.innerWidth - margin) {
-      item.pos.x = window.innerWidth - margin;
-      item.vel.x *= -1;
-    }
-    if (item.pos.y < 0) {
-      item.pos.y = 0;
-      item.vel.y *= -1;
-    }
-    if (item.pos.y > window.innerHeight - margin) {
-      item.pos.y = window.innerHeight - margin;
-      item.vel.y *= -1;
-    }
+
+const elWidth = item.el.offsetWidth;
+const elHeight = item.el.offsetHeight;
+
+// Contención en los bordes con base en el tamaño real
+if (item.pos.x < 0) {
+  item.pos.x = 0;
+  item.vel.x *= -1;
+}
+if (item.pos.x > window.innerWidth - elWidth) {
+  item.pos.x = window.innerWidth - elWidth;
+  item.vel.x *= -1;
+}
+if (item.pos.y < 0) {
+  item.pos.y = 0;
+  item.vel.y *= -1;
+}
+if (item.pos.y > window.innerHeight - elHeight) {
+  item.pos.y = window.innerHeight - elHeight;
+  item.vel.y *= -1;
+}
+
 
     // Evita el centro (zona libre interior)
     const buffer = 150;
