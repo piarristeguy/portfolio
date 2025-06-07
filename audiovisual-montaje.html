@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Piarristeguy - Montaje Audiovisual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Oswald', sans-serif;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Animaciones reutilizables */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .fadeZoomIn {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 1.2s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .tiempo {
+    color: #75e24a;
+    margin-top: -20px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin-top: 30px;
+  }
+
+  a {
+    font-size: 1.5rem;
+    color: #75e24a;
+    text-decoration: none;
+  }
+
+.video-section {
+  background-color: #000;
+  padding: 40px 20px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.video-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #75e24a;
+  text-transform: uppercase;
+}
+
+.video-block {
+  margin-bottom: 50px;
+}
+
+.video-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.video-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-container iframe {
+  width: 270px;
+  height: 480px;
+  border: none;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeZoomIn 0.8s ease forwards;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.video-container iframe:nth-of-type(1) { animation-delay: 0.2s; }
+.video-container iframe:nth-of-type(2) { animation-delay: 0.4s; }
+.video-container iframe:nth-of-type(3) { animation-delay: 0.6s; }
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-container iframe {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 9/16;
+  }
+}
+
+.tiempo {
+  text-align: center;
+  color: #75e24a;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="fadeInUp delay-1">FALLA DE MERCADO</h2>
+    <h3 class="fadeInUp delay-2">
+      <div class="tiempo">2024</div>
+      <br><i>En el canal Cenital. Capítulo de muestra "Finfluencers - Cap. 16"</i>
+    </h3>
+    <iframe class="fadeZoomIn delay-3" src="https://www.youtube.com/embed/RjJ2-rkNRr4" allowfullscreen></iframe>
+  </div>
+
+
+  <div class="container">
+    <h2 class="fadeInUp delay-1">SUPER 55</h2>
+    <h3 class="fadeInUp delay-2">
+      <div class="tiempo">2023</div>
+      <br><i>En el canal Photo Experience. Capítulo de muestra "Rodrigo Abd - Cap. 5"</i>
+    </h3>
+    <iframe class="fadeZoomIn delay-3" src="https://www.youtube.com/embed/gwQLoPR5rec" allowfullscreen></iframe>
+  </div>
+
+
+
+<section class="video-section">
+  <h2 class="video-title">Redes Sociales</h2>
+
+  <div class="video-block">
+    <h3 class="video-subtitle">220 Podcast</h3>
+    <div class="tiempo">2023</div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/VxYzxb_gR9Y" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/B7Gr6-9o0WQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/bwdJ9Q3OjRc" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="video-block">
+    <h3 class="video-subtitle">Cenital</h3>
+    <div class="tiempo">2023/24</div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/sdTbYWjpcag" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/B7SnYrVJLtU" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Z5-2CCzbJBA" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="video-block">
+        <h3 class="video-subtitle">New Game Plus</h3>
+    <div class="tiempo">2023/24</div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/b2segNkYzYg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/JhWSMb9kn9I" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ahwG_g9JDWY" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+    <h2 class="fadeInUp delay-1">Reel Edición de video.</h2>
+    <h3 class="fadeInUp delay-2">
+      <div class="tiempo">2023</div>
+    </h3>
+    <iframe class="fadeZoomIn delay-3" src="https://www.youtube.com/embed/rDxg3tVyP7U" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
