@@ -27,7 +27,7 @@
 
     h3 {
       font-size: 1rem;
-      text-align: center;
+      text-align: left;
       letter-spacing: 1px;
       opacity: 0;
       transform: translateY(20px);
@@ -36,24 +36,45 @@
     }
    
     .tiempo {
-      color: #75e24a;
+      color: #a9ff20;
       margin-top: -20px;
+      text-align: center;
       font-family: 'Oswald', sans-serif;
     }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+    .detalle-ficha{
+             color: #a9ff20;
+             margin-bottom: 4px;
+      }
+
+.detalle-contenedor {
+  max-width: 800px;
+
+
+  text-align: left;   /* Todo el texto queda justificado a la izquierda */
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 1s forwards;
-      animation-delay: 0.6s;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      animation-delay: 0.4s;
+}
+
+      .blanco {
+  color: white;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.6s;
+
+  width: 95vw;
+  margin: 0 auto;
+}
 
     .galeria img {
       width: 100%;
@@ -121,13 +142,54 @@ a {
         transform: scale(1);
         opacity: 1;
       }
+
+
     }
   </style>
 </head>
 <body>
 
-  <h2>TELARAÑAS</h2>
-  <h3> <div class="tiempo"> 2018/2019 </div> <br> <i> Basada en el texto de Eduardo Pavlovsky</i></BR></h3>
+<h2>TELARAÑAS</h2>
+<h3 class="tiempo">2018/2019</h3>
+
+<div class="detalle-contenedor">
+  <div class="detalle-ficha">
+    Basada en el texto de <span class="blanco">Eduardo Pavlovsky</span>
+  </div>
+  <div class="detalle-ficha">
+    Intérpretes: <span class="blanco">Franco Baldi, Chavo Exposto, Lailén Alvarez, Nicolas Spadavecchia</span>
+  </div>
+  <div class="detalle-ficha">
+    Vestuario: <span class="blanco">Carolina Fernández</span>
+  </div>
+  <div class="detalle-ficha">
+    Escenografía: <span class="blanco">Ailín Kirjner</span>
+  </div>
+  <div class="detalle-ficha">
+    Diseño de luces: <span class="blanco">Franco Vega Valiente</span>
+  </div>
+  <div class="detalle-ficha">
+    Diseño de sonido: <span class="blanco">Falopero Idiota</span>
+  </div>
+  <div class="detalle-ficha">
+    Realización de objetos: <span class="blanco">Anibal Aponte</span>
+  </div>
+  <div class="detalle-ficha">
+    Asistencia general: <span class="blanco">Juan Sebastian Suriani</span>
+  </div>
+  <div class="detalle-ficha">
+    Prensa: <span class="blanco">Julia Picci</span>
+  </div>
+  <div class="detalle-ficha">
+    Producción: <span class="blanco">Gabi Peperina</span>
+  </div>
+  <div class="detalle-ficha">
+    Dirección y Producción: <span class="blanco">Pancho Piarristeguy</span>
+  </div>
+</div>
+<br>
+
+
   <div class="galeria" id="galeria-telaranas">
     <img src="https://i.imgur.com/3MY101l.jpg" alt="Telarañas 1">
     <img src="https://i.imgur.com/G9UJ6la.jpg" alt="Telarañas 2">
@@ -145,9 +207,47 @@ a {
     <img src="https://i.imgur.com/o32KmMa.jpg" alt="Telarañas 14">
     <img src="https://i.imgur.com/niv2E2Z.jpg" alt="Telarañas 15">
   </div>
+  
 
   <h2>EL TRICICLO</h2> 
-  <h3> <div class="tiempo">2017/2018 </div> <br> <i>Basada en el texto de Fernando Arrabal</i></BR></h3>
+<h3 class="tiempo">2017/2018</h3>
+
+<div class="detalle-contenedor">
+  <div class="detalle-ficha">
+    Basada en el texto de <span class="blanco">Fernando Arrabal</span>
+  </div>
+  <div class="detalle-ficha">
+    Intérpretes: <span class="blanco">Chavo Exposto, Nadia Soledad Camino, Julián Abelenda, Juan Sebastián Suriani, Hernán Kochman</span>
+  </div>
+  <div class="detalle-ficha">
+    Vestuario: <span class="blanco">Carolina Fernández</span>
+  </div>
+  <div class="detalle-ficha">
+    Escenografía: <span class="blanco">Gabi Peperina</span>
+  </div>
+  <div class="detalle-ficha">
+    Diseño de luces: <span class="blanco">Franco Vega Valiente y Lailén Álvarez</span>
+  </div>
+  <div class="detalle-ficha">
+    Diseño de sonido: <span class="blanco">Andres Raffo</span>
+  </div>
+  <div class="detalle-ficha">
+    Asistencia de dirección: <span class="blanco">Manon Segret</span>
+  </div>
+  <div class="detalle-ficha">
+    Asistencia de producción <span class="blanco">Juan Enriquez</span>
+  </div>
+  <div class="detalle-ficha">
+    Dirección y Producción: <span class="blanco">Pancho Piarristeguy</span>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
   <div class="galeria" id="galeria-triciclo">
     <img src="https://i.imgur.com/fr44RCj.jpg" alt="Triciclo 1">
     <img src="https://i.imgur.com/Vk0823T.jpg" alt="Triciclo 2">
@@ -161,8 +261,9 @@ a {
     <img src="https://i.imgur.com/gTpX7BS.jpg" alt="Triciclo 10">
     <img src="https://i.imgur.com/YmUvdyL.jpg" alt="Triciclo 11">
     <img src="https://i.imgur.com/m5kSKRr.jpg" alt="Triciclo 12">
-    <img src="https://i.imgur.com/fEqn7dg.jpg" alt="Triciclo 13">
+
     <img src="https://i.imgur.com/1qjQ4Yt.jpg" alt="Triciclo 14">
+        <img src="https://i.imgur.com/fEqn7dg.jpg" alt="Triciclo 13">
   </div>
 
 
