@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROBANDO COSAS</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: 'Oswald', sans-serif;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Animaciones reutilizables */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .fadeZoomIn {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 1.2s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: 10px 0 5px;
+    letter-spacing: 1px;
+    color: #75e24a;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0 0 25px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #ccc;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 850px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #1f1f1f;
+    background: #0a0a0a;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    text-decoration: none;
+  }
+
+  .home-btn:hover {
+    transform: translateY(-1px);
+    background: #111;
+    border-color: #2a2a2a;
+  }
+
+  .home-btn span {
+    font-size: 1rem;
+    color: #75e24a;
+    letter-spacing: .5px;
+  }
+
+  .home-icon {
+    width: 24px;
+    height: 24px;
+    fill: #75e24a;
+  }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1 class="fadeInUp">PROBANDO COSAS</h1>
+    <h2 class="fadeInUp delay-1">Febrero 2025</h2>
+
+    <iframe class="fadeZoomIn delay-2" src="https://www.youtube.com/embed/7KELE6Bfaoo" allowfullscreen></iframe>
+
+    <p class="fadeInUp delay-2">
+      Probando Cosas es una miniserie de piezas de montaje que busca explorar herramientas dentro de After Effects.  
+      <br>El sonido es de <em>Tchaikovsky - Marcha Eslava, Op.31</em>.
+    </p>
+
+    <!-- Botón Home -->
+    <a class="home-btn fadeInUp delay-3" href="./index.html">
+      <svg class="home-icon" viewBox="0 0 24 24">
+        <path d="M12 3l10 9h-3v9h-6v-6h-2v6H5v-9H2z"/>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>

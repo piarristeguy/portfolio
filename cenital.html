@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CENITAL</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: 'Oswald', sans-serif;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Animaciones reutilizables */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .fadeZoomIn {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 1.2s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: 10px 0 25px;
+    letter-spacing: 1px;
+    color: #75e24a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #75e24a;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 850px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .iframe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .iframe-grid iframe {
+    width: 270px;
+    height: 480px;
+  }
+
+  .home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #1f1f1f;
+    background: #0a0a0a;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    text-decoration: none;
+  }
+
+  .home-btn:hover {
+    transform: translateY(-1px);
+    background: #111;
+    border-color: #2a2a2a;
+  }
+
+  .home-btn span {
+    font-size: 1rem;
+    color: #75e24a;
+    letter-spacing: .5px;
+  }
+
+  .home-icon {
+    width: 24px;
+    height: 24px;
+    fill: #75e24a;
+  }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1 class="fadeInUp">CENITAL</h1>
+
+    <p class="fadeInUp delay-1">
+      Desde el 2024 formo parte del equipo de Cenital como editor y animador. Participé y participo en los programas 
+      <strong>Falla de Mercado</strong>, <strong>On The Record</strong>, <strong>540</strong>, <strong>El Fin de la Metáfora</strong>, 
+      <strong>Ustedes No Habían Nacido</strong>; además de la producción de piezas de marca y contenido para redes.
+    </p>
+
+    <h2 class="fadeInUp delay-2">Ustedes No Habían Nacido</h2>
+    <p class="fadeInUp delay-2">Capítulo de muestra: "Menem y los 90 - Cap. 2"</p>
+    <iframe class="fadeZoomIn delay-2" src="https://www.youtube.com/embed/2fYsyQDgzCs" allowfullscreen></iframe>
+
+    <h2 class="fadeInUp delay-2">Falla de Mercado</h2>
+    <p class="fadeInUp delay-2">Capítulo de muestra: "Finfluencers - Cap. 16"</p>
+    <iframe class="fadeZoomIn delay-2" src="https://www.youtube.com/embed/RjJ2-rkNRr4" allowfullscreen></iframe>
+
+    <h2 class="fadeInUp delay-2">El Fin de la Metáfora</h2>
+    <p class="fadeInUp delay-2">Emisión de muestra: 13 Marzo 2025 - 1er programa.</p>
+    <iframe class="fadeZoomIn delay-2" src="https://www.youtube.com/embed/0OVhVp9YhUM?list=PL-I14u1ZEwOTqrD_fDF_CbbBhGA41MjOc" allowfullscreen></iframe>
+
+    <h2 class="fadeInUp delay-2">Algunos cortes para redes</h2>
+    <div class="iframe-grid fadeZoomIn delay-3">
+      <iframe src="https://www.youtube.com/embed/NX3ev2H6HwA" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Xey9zoRZUQs" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/NLSXXe8FpEw" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/sdTbYWjpcag" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/B7SnYrVJLtU" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Z5-2CCzbJBA" allowfullscreen></iframe>
+    </div>
+
+    <!-- Botón Home -->
+    <a class="home-btn fadeInUp delay-3" href="./index.html">
+      <svg class="home-icon" viewBox="0 0 24 24">
+        <path d="M12 3l10 9h-3v9h-6v-6h-2v6H5v-9H2z"/>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>

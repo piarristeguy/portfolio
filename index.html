@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pancho Piarristeguy</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: 'Oswald', sans-serif;
+    background: #111111;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+.divider {
+  border: none;
+  border-top: 1px solid #555; /* línea gris */
+  margin: 2em auto;           /* separación arriba y abajo */
+  width: 80%;                 /* que no ocupe todo el ancho */
+  opacity: 0.6;               /* un poquito translúcida */
+}
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Animaciones reutilizables */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .fadeZoomIn {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 1.2s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin: 10px 0 20px;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-style: italic;
+    margin-top: 60px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 18px 0 10px;
+  }
+
+  .tiempo {
+    color: #75e24a;
+    margin-top: -20px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin-top: 30px;
+  }
+
+  a {
+    font-size: 1.5rem;
+    color: #75e24a;
+    text-decoration: none;
+  }
+
+  .thumb {
+    display: inline-block;
+    margin: 8px 0 26px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform .2s ease;
+  }
+
+  .thumb:hover { transform: scale(1.02); }
+
+  .thumb img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+  }
+
+  .video-section {
+    background-color: #000;
+    padding: 40px 20px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .video-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #75e24a;
+    text-transform: uppercase;
+  }
+
+  .video-block {
+    margin-bottom: 50px;
+  }
+
+  .video-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .video-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .video-container iframe {
+    width: 270px;
+    height: 480px;
+    border: none;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeZoomIn 0.8s ease forwards;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .video-container iframe:nth-of-type(1) { animation-delay: 0.2s; }
+  .video-container iframe:nth-of-type(2) { animation-delay: 0.4s; }
+  .video-container iframe:nth-of-type(3) { animation-delay: 0.6s; }
+
+  @media (max-width: 768px) {
+    .video-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-container iframe {
+      width: 90%;
+      height: auto;
+      aspect-ratio: 9/16;
+    }
+
+    .thumb img { max-width: 92vw; }
+  }
+
+  .tiempo {
+    text-align: center;
+    color: #75e24a;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  footer {
+    margin-top: 70px;
+    padding: 30px 0 50px;
+    border-top: 1px solid #222;
+  }
+
+  .contacto {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #1f1f1f;
+    background: #0a0a0a;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+
+  .wapp-btn:hover {
+    transform: translateY(-1px);
+    background: #111;
+    border-color: #2a2a2a;
+  }
+
+  .wapp-btn span {
+    font-size: 1rem;
+    color: #75e24a;
+    letter-spacing: .5px;
+  }
+
+  .wapp-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+  }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1 class="fadeInUp">Pancho Piarristeguy</h1>
+<hr class="divider">
+    <!-- Dirección Audiovisual -->
+    <h2 class="fadeInUp delay-1">Dirección Audiovisual</h2>
+
+    <!-- ATLÁNTICO POMAROLA -->
+    <h3 class="fadeInUp">
+      <a href="pomarola.html" rel="noopener noreferrer">ATLÁNTICO POMAROLA</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-2" href="pomarola.html"  rel="noopener noreferrer" aria-label="Abrir ATLÁNTICO POMAROLA en nueva pestaña">
+      <img src="./pomarola.png" alt="Miniatura de ATLÁNTICO POMAROLA" />
+    </a>
+
+    <!-- PROBANDO COSAS -->
+    <h3 class="fadeInUp">
+      <a href="./probando.html" rel="noopener noreferrer">PROBANDO COSAS</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-1" href="./probando.html"  rel="noopener noreferrer" aria-label="Abrir PROBANDO COSAS en nueva pestaña">
+      <img src="./probandocosas.png" alt="Miniatura de PROBANDO COSAS" />
+    </a>
+<hr class="divider">
+    <!-- Montaje Audiovisual -->
+    <h2 class="fadeInUp delay-2">Montaje Audiovisual</h2>
+
+    <!-- CENITAL -->
+    <h3 class="fadeInUp">
+      <a href="./cenital.html" rel="noopener noreferrer">CENITAL</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-1" href="./cenital.html" rel="noopener noreferrer" aria-label="Abrir CENITAL en nueva pestaña">
+      <img src="./canital.png" alt="Miniatura de CENITAL" />
+    </a>
+
+    <!-- SUPER 55 -->
+    <h3 class="fadeInUp">
+      <a href="./photo.html" rel="noopener noreferrer">SUPER 55</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-2" href="./photo.html"  rel="noopener noreferrer" aria-label="Abrir SUPER 55 en nueva pestaña">
+      <img src="./foto.jpg" alt="Miniatura de SUPER 55" />
+    </a>
+
+
+<!-- 220 PODCAST -->
+
+
+    <h3 class="fadeInUp">
+      <a href="./220.html" rel="noopener noreferrer">220 PODCAST</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-2" href="./220.html"  rel="noopener noreferrer" aria-label="Abrir 220 en nueva pestaña">
+      <img src="./220.jpg" alt="Miniatura de 220" />
+    </a>
+
+<!-- NGP -->
+
+
+    <h3 class="fadeInUp">
+      <a href="./ngp.html" rel="noopener noreferrer">NEW GAME PLUS</a>
+    </h3>
+    <a class="thumb fadeZoomIn delay-2" href="./ngp.html"  rel="noopener noreferrer" aria-label="Abrir ngp en nueva pestaña">
+      <img src="./ngp.jpg" alt="Miniatura de NGP" />
+    </a>
+<hr class="divider">
+
+<!-- Otros -->
+      <a href="./otros.html"  rel="noopener noreferrer"><h2 class="fadeInUp delay-1"> 
+     Otros
+     </h2>
+</a>
+
+
+    <!-- Footer -->
+    <footer class="fadeInUp delay-3">
+      <div class="contacto">
+        <span>Contacto</span>
+        <a class="wapp-btn" href="https://wa.me/541157033418" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+          <!-- Ícono de WhatsApp en SVG (no requiere archivos externos) -->
+          <svg class="wapp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#25D366" d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.257.592 4.372 1.623 6.213L3.2 28.8l6.79-1.584a12.7 12.7 0 0 0 6.013 1.528c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.8-12.8-12.8z"/>
+            <path fill="#fff" d="M23.88 18.846c-.126-.208-.46-.333-.96-.583-.5-.25-2.96-1.46-3.418-1.626-.459-.166-.793-.25-1.127.25-.333.5-1.293 1.626-1.587 1.96-.293.333-.586.375-1.086.125-.5-.25-2.11-.78-4.02-2.49-1.485-1.32-2.488-2.95-2.781-3.45-.292-.5-.031-.77.22-1.02.226-.225.5-.583.75-.875.25-.292.333-.5.5-.833.167-.334.084-.625-.042-.875-.125-.25-1.127-2.72-1.545-3.72-.407-.976-.82-.843-1.127-.86l-.96-.02c-.292 0-.76.104-1.157.5-.398.397-1.516 1.48-1.516 3.61s1.552 4.189 1.77 4.48c.219.292 3.05 4.66 7.387 6.58 1.033.447 1.84.715 2.468.915 1.036.33 1.98.283 2.727.172.832-.125 2.96-1.208 3.378-2.375.417-1.167.417-2.167.292-2.375z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
